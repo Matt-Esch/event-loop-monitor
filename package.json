@@ -1,0 +1,44 @@
+{
+  "name": "event-loop-monitor",
+  "version": "1.0.0",
+  "description": "Automated flamegraphs for processes with high event loop lag",
+  "main": "index.js",
+  "scripts": {
+    "build": "npm run build-src && npm run build-test",
+    "build-src": "tsc -p tsconfig.src.json",
+    "build-test": "tsc -p tsconfig.test.json",
+    "cover": "nyc node --require source-map-support/register build/test/index.js",
+    "clean": "rimraf coverage build .src.tsbuildinfo .test.tsbuildinfo",
+    "lint": "eslint . --ext .ts,.tsx",
+    "test": "npm run lint && npm run build && npm run cover"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:Matt-Esch/event-loop-monitor"
+  },
+  "keywords": [
+    "flamegraph",
+    "eventloop",
+    "lag",
+    "backtrace"
+  ],
+  "author": "Matt Esch",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^14.14.22",
+    "@typescript-eslint/eslint-plugin": "^4.14.0",
+    "@typescript-eslint/parser": "^4.14.0",
+    "eslint": "^7.18.0",
+    "eslint-config-prettier": "^7.2.0",
+    "nyc": "^15.1.0",
+    "prettier": "^2.2.1",
+    "rimraf": "^3.0.2",
+    "source-map-support": "^0.5.19",
+    "typescript": "^4.1.3"
+  },
+  "dependencies": {},
+  "engines": {
+    "node": "^12.9.0"
+  },
+  "engineStrict": true
+}

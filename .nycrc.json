@@ -1,0 +1,17 @@
+{
+    "all": "true",
+    "cache": "false",
+    "exclude-after-remap": false,
+    "exclude": ["build/test/**"],
+    "include": ["build/**"],
+    "report-dir": "./coverage",
+    "reporter": [
+        "html",
+        "lcovonly",
+        "clover",
+        "text",
+        "text-summary"
+    ],
+    "sourceMap": true,
+    "temp-dir": "./coverage/.nyc_output"
+}

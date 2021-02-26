@@ -1,0 +1,12 @@
+{
+    "extends": "./tsconfig.json",
+    "compilerOptions": {
+      "removeComments": true,
+      "incremental": true,
+      "tsBuildInfoFile": ".src.tsbuildinfo",
+      "inlineSources": true
+    },
+    "include": [
+      "src/**/*"
+    ]
+}
